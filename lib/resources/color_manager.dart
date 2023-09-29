@@ -59,7 +59,7 @@ class LightColorsManager extends ColorsManager {
   Color get orange => const Color(0xFFFF5757);
 
   @override
-  Color get textFieldBackground => const Color(0xFFF5F5F5);
+  Color get textFieldBackground => const Color(0xffF5F5F5);
 
   @override
   Color get tableTitleBackground => const Color(0xFFF3F4F6);
@@ -115,7 +115,7 @@ class DarkColorsManager extends ColorsManager {
   Color get orange => const Color(0xFFFF5757);
 
   @override
-  Color get textFieldBackground => const Color(0xFFF5F5F5);
+  Color get textFieldBackground => Color(0x2BF5F5F5);
 
   @override
   Color get tableTitleBackground => const Color(0xFFF3F4F6);

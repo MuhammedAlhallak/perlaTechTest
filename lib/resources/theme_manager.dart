@@ -33,7 +33,7 @@ ThemeData getApplicationTheme(
     //button Theme
 
     buttonTheme: ButtonThemeData(
-        shape: RoundedRectangleBorder(),
+        shape: const RoundedRectangleBorder(),
         disabledColor: colorsManager.grey1,
         buttonColor: colorsManager.primary,
         splashColor: colorsManager.lightPrimary),
@@ -65,6 +65,7 @@ ThemeData getApplicationTheme(
       fillColor: colorsManager.textFieldBackground,
       filled: true,
       isDense: true,
+      
       //content padding
       contentPadding: EdgeInsets.all(AppPading.p12.w),
       //hint style

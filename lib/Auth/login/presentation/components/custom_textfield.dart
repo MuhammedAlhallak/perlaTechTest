@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../core/services/services_locator.dart';
 import '../../../../resources/color_manager.dart';
+import '../../../../resources/font_manager.dart';
+import '../../../../resources/styles_manager.dart';
 import '../../../../resources/values_manager.dart';
 
 class CustomTextField extends StatefulWidget {
@@ -21,7 +23,6 @@ class CustomTextField extends StatefulWidget {
   final TextEditingController? controller;
   final TextInputType? textInputType;
 
-  
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
 }
@@ -30,10 +31,12 @@ class _CustomTextFieldState extends State<CustomTextField> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      keyboardType: widget.textInputType ,
+      keyboardType: widget.textInputType,
       controller: widget.controller,
       style: Theme.of(context).textTheme.bodyMedium,
       decoration: InputDecoration(
+        fillColor: sl<ColorsManager>().textFieldBackground,
+        filled: true,
         hintText: widget.hintText ?? '',
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 16.w, right: 12.w),
@@ -84,7 +87,8 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
       obscureText: visible,
       style: Theme.of(context).textTheme.bodyMedium,
       decoration: InputDecoration(
-      
+        fillColor: sl<ColorsManager>().textFieldBackground,
+        filled: true,
         prefixIcon: Padding(
           padding:
               EdgeInsets.only(left: AppPading.p16.w, right: AppPading.p12.w),
@@ -98,8 +102,9 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
                 )
               : const SizedBox(),
         ),
+
         suffixIcon: Padding(
-          padding: EdgeInsets.only(right: AppPading.p24.w),
+          padding: EdgeInsets.symmetric(horizontal: AppPading.p24.w),
           child: GestureDetector(
             child: visible == false
                 ? SvgPicture.asset(
