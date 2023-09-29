@@ -49,19 +49,16 @@ class DataStore {
 
   Future<void> setDataList(List<DataModel> dataList) async {
     final prefs = await _initStorage();
-
     prefs.setString(keyData, jsonEncode(dataList.map((e) => e.toJson()).toList()));
   }
 
   Future<bool> checkDataExistence() async {
     final prefs = await _initStorage();
-
     return prefs.containsKey(keyData);
   }
 
   Future<bool> deleteData() async {
     final prefs = await _initStorage();
-
     return prefs.remove(keyData);
   }
 }

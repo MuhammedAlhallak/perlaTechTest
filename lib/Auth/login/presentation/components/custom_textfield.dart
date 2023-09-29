@@ -12,12 +12,16 @@ class CustomTextField extends StatefulWidget {
       this.onChanged,
       this.validator,
       this.controller,
+      this.textInputType,
       this.prefixIcon});
   final String? hintText;
   final String? prefixIcon;
   final void Function(String)? onChanged;
   final String? Function(String?)? validator;
   final TextEditingController? controller;
+  final TextInputType? textInputType;
+
+  
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
 }
@@ -26,6 +30,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      keyboardType: widget.textInputType ,
       controller: widget.controller,
       style: Theme.of(context).textTheme.bodyMedium,
       decoration: InputDecoration(
@@ -79,6 +84,7 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
       obscureText: visible,
       style: Theme.of(context).textTheme.bodyMedium,
       decoration: InputDecoration(
+      
         prefixIcon: Padding(
           padding:
               EdgeInsets.only(left: AppPading.p16.w, right: AppPading.p12.w),

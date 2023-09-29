@@ -83,11 +83,13 @@ class _HomeViewState extends State<HomeView> {
                             Container(
                               width: AppSize.s252.w,
                               height: AppSize.s48.h,
-                              margin: EdgeInsets.only(right: AppMargin.m8.w),
                               child: CustomTextField(
                                 controller: controller,
                                 hintText: AppStrings.enterYourText.tr(context),
                               ),
+                            ),
+                            SizedBox(
+                              width: AppSize.s8.w,
                             ),
                             ElevatedButton(
                               onPressed: () {
@@ -99,12 +101,7 @@ class _HomeViewState extends State<HomeView> {
                                     AppSize.s82.w,
                                     AppSize.s48.h,
                                   ),
-                                  backgroundColor:
-                                      // state.registerFormState ==
-                                      //         RequestState.loading
-                                      //     ? ColorsManager.disabledGrey
-                                      //     :
-                                      sl<ColorsManager>().primary),
+                                  backgroundColor: sl<ColorsManager>().primary),
                               child: Text(AppStrings.add.tr(context),
                                   style: getMediumMontesertStyle(
                                       color: sl<ColorsManager>().white,

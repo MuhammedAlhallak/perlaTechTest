@@ -30,11 +30,6 @@ final sl = GetIt.instance;
 // class ServicesLocator {
 Future<void> init() async {
   // BLOC
-  // sl.registerFactory(() => MoviesBloc(sl(), sl(), sl()));
-  // sl.registerFactory(() => MovieDetailsBloc(sl(), sl()));
-
-  //HRMaster
-
   sl.registerFactory(() => LoginBloc(sl(), sl()));
   sl.registerFactory(() => UserInfoBloc(sl(), sl()));
   sl.registerFactory(() => RegisterBloc(
@@ -51,38 +46,24 @@ Future<void> init() async {
   sl.registerLazySingleton<DeleteDataUseCase>(() => DeleteDataUseCase(sl<DataStore>()));
 
   /// USECASE
-  // sl.registerLazySingleton(() => GetNowPlayingMoviesUseCase(sl()));
-  // sl.registerLazySingleton(() => GetPopularMoveisUseCase(sl()));
-  // sl.registerLazySingleton(() => GetTopRatedMoviesUseCase(sl()));
-  // sl.registerLazySingleton(() => GetMovieDetailsUseCase(sl()));
-  // sl.registerLazySingleton(() => GetMovieRecommendationsUseCase(sl()));
-
-  //HRMaster
+ 
   sl.registerLazySingleton(() => LoginUseCase(sl()));
   sl.registerLazySingleton(() => LogOutUseCase(sl()));
   sl.registerLazySingleton(() => IsLoggedUseCase(sl()));
   sl.registerLazySingleton(() => RegisterUseCase(sl()));
 
   ///REPOSITORY
-  // sl.registerLazySingleton<BaseMoveisRepository>(
-  //     () => MoviesRepository(sl()));
-  //HRMaster
   sl.registerLazySingleton<BaseLoginRepository>(() => LoginRepository(sl(), sl()));
   sl.registerLazySingleton<BaseUserInfoRepository>(() => UserInfoRepository(sl(), sl()));
   sl.registerLazySingleton<BaseRegisterRepository>(() => RegisterRepository(sl(), sl()));
 
   /// DATA SOURCE
-  // sl.registerLazySingleton<BaseMovieRemoteDataSource>(
-  //     () => MovieRemoteDataSource());
-  //HRMaster
   sl.registerLazySingleton<BaseLoginDataSource>(() => LoginDataSource());
   sl.registerLazySingleton<BaseUserInfoDataRemoteSource>(() => UserInfoDataRemoteSource());
   sl.registerLazySingleton<BaseUserInfoDataLocalSource>(() => UserInfoDataLocalSource());
-
   sl.registerLazySingleton<BaseRegisterDataSource>(() => RegisterDataSource());
 
 // External Packages
-
   final SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
   sl.registerLazySingleton(() => sharedPreferences);
 }

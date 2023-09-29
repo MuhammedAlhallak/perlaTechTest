@@ -107,6 +107,7 @@ class RegisterForm extends StatelessWidget {
 
         return CustomTextField(
           prefixIcon: ImagesAssets.fullName,
+          textInputType: TextInputType.text,
           validator: (value) =>
               state.isValidfullName ? null : 'fullName Too Short',
           onChanged: (value) => context
@@ -124,6 +125,7 @@ class RegisterForm extends StatelessWidget {
         log("rebuild phone field");
 
         return CustomTextField(
+          textInputType: TextInputType.phone,
           prefixIcon: ImagesAssets.phone,
           validator: (value) => state.isValidphone ? null : 'phone Too Short',
           onChanged: (value) => context
@@ -152,7 +154,8 @@ class RegisterForm extends StatelessWidget {
 
   Widget _confirmPasswordTextField() {
     return BlocBuilder<RegisterBloc, RegisterState>(
-        buildWhen: (previous, current) => previous.confirmPassword != current.confirmPassword,
+        buildWhen: (previous, current) =>
+            previous.confirmPassword != current.confirmPassword,
         builder: (context, state) {
           return PasswordTextField(
             prefixIcon: ImagesAssets.lock,

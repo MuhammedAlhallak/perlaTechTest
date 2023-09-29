@@ -82,6 +82,7 @@ class LoginForm extends StatelessWidget {
         log("rebuild username field");
 
         return CustomTextField(
+          textInputType: TextInputType.phone,
           prefixIcon: ImagesAssets.phone,
           validator: (value) =>
               state.isValidUsername ? null : 'Username Too Short',
