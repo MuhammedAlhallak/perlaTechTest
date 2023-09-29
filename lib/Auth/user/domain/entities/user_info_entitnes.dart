@@ -16,7 +16,7 @@ class UserLogin extends Equatable {
   final int id;
   final String username;
   final int points;
-  final String phone;
+  final int phone;
   final String imagePath;
   final String timestamp;
   final String userType;

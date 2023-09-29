@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:perlatech/Auth/login/presentation/screens/login_view.dart';
-import 'package:perlatech/core/localization/app_lang.dart';
 import 'package:perlatech/home/presentation/screens/home.dart';
 import 'package:perlatech/resources/strings_manager.dart';
 import 'package:perlatech/splash/splash_view.dart';
 
 import '../Auth/register/presentation/screens/register_view.dart';
-
 
 class Routes {
   static const String splashRoute = '/';
@@ -23,13 +21,13 @@ class RoutesGenerator {
   static Route<dynamic> getRoute(RouteSettings settings) {
     switch (settings.name) {
       case Routes.splashRoute:
-        return MaterialPageRoute(builder: (_) =>  SplashView());
+        return MaterialPageRoute(builder: (_) => SplashView());
       case Routes.loginRoute:
         return MaterialPageRoute(builder: (_) => LoginView());
       case Routes.homeRoute:
-        return MaterialPageRoute(builder: (_) =>   HomeView());
+        return MaterialPageRoute(builder: (_) => HomeView());
       case Routes.registerRoute:
-        return MaterialPageRoute(builder: (_) =>  RegisterView());
+        return MaterialPageRoute(builder: (_) => RegisterView());
       // case Routes.onBoardingRoute:
       //   return MaterialPageRoute(builder: (_) => const OnboardingView());
       // case Routes.forgotPasswordRoute:

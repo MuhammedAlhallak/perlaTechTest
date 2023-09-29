@@ -5,7 +5,7 @@ class UserInfoModel extends UserInfo {
 
   factory UserInfoModel.fromJson(Map<String, dynamic> json) => UserInfoModel(
         userLogin: userLoginModel.fromJson(json['user']),
-        token: json['token'] ?? "",
+        token: json['token'],
       );
 
   Map<String, dynamic> toJson() {
@@ -29,9 +29,9 @@ class userLoginModel extends UserLogin {
   factory userLoginModel.fromJson(Map<String, dynamic> json) => userLoginModel(
         id: json['id'],
         username: json['username'] ?? "",
-        phone: json['phone'] ?? "",
-        timestamp: json['timestamp'] ?? "",
-        points: json['points'] ?? "",
+        phone: json['phone'] ?? 0996975297,
+        timestamp: json['timestamp'].toString(),
+        points: json['points'] ?? 0,
         imagePath: json['image_path'] ?? "",
         userType: json['user_type'] ?? "",
       );
@@ -48,5 +48,3 @@ class userLoginModel extends UserLogin {
     };
   }
 }
-
-
