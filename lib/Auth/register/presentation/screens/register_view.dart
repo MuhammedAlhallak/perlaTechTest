@@ -18,9 +18,14 @@ import '../controllers/register_bloc.dart';
 import '../controllers/register_event.dart';
 import '../controllers/register_state.dart';
 
-class RegisterView extends StatelessWidget {
-  RegisterView({super.key});
+class RegisterView extends StatefulWidget {
+  const RegisterView({super.key});
 
+  @override
+  State<RegisterView> createState() => _RegisterViewState();
+}
+
+class _RegisterViewState extends State<RegisterView> {
   final _formkey = GlobalKey<FormState>();
 
   @override
