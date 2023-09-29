@@ -181,6 +181,8 @@ class _HomeViewState extends State<HomeView> {
                                     style: getRegularMontesertStyle(
                                         color: sl<ColorsManager>().darkGrey,
                                         fontSzie: FontSzie.s10.sp),
+                                    overflow: TextOverflow.ellipsis,
+                                    maxLines: 1,
                                   ),
                                 ),
                                 Container(
