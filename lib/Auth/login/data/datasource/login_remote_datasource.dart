@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 
 import 'package:dio/dio.dart';
 
@@ -15,18 +16,13 @@ abstract class BaseLoginDataSource {
 class LoginDataSource extends BaseLoginDataSource {
   @override
   Future<UserInfoModel> login(LoginParameters parameters) async {
-    var object = {
-      "phone": parameters.phone,
-      //"954339974"
-      "password": parameters.password
-      //"Qwe@123@"
-    };
-    // var param = jsonEncode(object);
+    var object = {"phone": parameters.phone, "password": parameters.password};
+    var param = jsonEncode(object);
 
     try {
       final response = await Dio().post(
         ApiConstance.loginPath,
-        data: object,
+        data: param,
         options: Options(
           headers: {'Content-Type': 'application/json'},
           followRedirects: true,
@@ -35,8 +31,26 @@ class LoginDataSource extends BaseLoginDataSource {
           },
         ),
       );
+      var data = jsonDecode(response.data["data"]);
+//response 200
+      ///response i have not like the documnets ?!
+      // {
+      //   data:
+      //   {
+      //     user:
+      //     {
+      //       id: 292,
+      //       username: user1  ,
+      //       points: 0,
+      //       phone: 954339974,
+      //       image_path: ,
+      //       timestamp: 2023-09-29 14:28:45.746707,
+      //       user_type:
+      //     },
+      //     token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjkyLCJ1c2VybmFtZSI6InVzZXIxIiwibG9naW4iOiI5NTQzMzk5NzQiLCJ0aW1lc3RhbXAiOiIyMDIzLTA5LTI5IDE0OjI4OjQ1Ljc0NjcwNyJ9.QNf2qQoERJbHel5OHEgqXSH8SLKXtmZToxfrEZ0BrWw
+      //     }
+      // }
 
-      var data = jsonDecode(response.data);
       if (response.statusCode == 200) {
         return UserInfoModel.fromJson(data);
       } else {

@@ -6,8 +6,8 @@ class AppStrings {
   static const enterYourDataToContinue = 'Enter your data to continue.';
   static const phone = 'Phone number';
   static const password = 'Password';
- 
- //Register
+
+  //Register
   static const createAccount = 'Create account!';
   static const registerToGetStarted = 'Register to get started.';
   static const fullName = 'Full name';
