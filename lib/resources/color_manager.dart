@@ -148,7 +148,7 @@ class DarkColorsManager extends ColorsManager {
   Color get iconColor => const Color(0xffffffff);
 
   @override
-  Color get textTable => const Color(0xff000000);
+  Color get textTable => const Color(0xff333333);
 }
 
 class ThemeFactory {

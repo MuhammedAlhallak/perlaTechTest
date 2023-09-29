@@ -5,7 +5,8 @@ import 'package:perlatech/resources/font_manager.dart';
 import 'package:perlatech/resources/styles_manager.dart';
 import 'package:perlatech/resources/values_manager.dart';
 
-ThemeData getApplicationTheme(ColorsManager colorsManager, Brightness brightness) {
+ThemeData getApplicationTheme(
+    ColorsManager colorsManager, Brightness brightness) {
   print('colorsManager ${colorsManager}');
   return ThemeData(
     //main colors
@@ -15,19 +16,20 @@ ThemeData getApplicationTheme(ColorsManager colorsManager, Brightness brightness
     disabledColor: colorsManager.grey1,
     splashColor: colorsManager.lightPrimary,
 
-
-brightness: brightness,
+    brightness: brightness,
     //card Theme
     cardTheme: CardTheme(
-        color: colorsManager.white, shadowColor: colorsManager.grey, elevation: AppSize.s4),
+        color: colorsManager.white,
+        shadowColor: colorsManager.grey,
+        elevation: AppSize.s4),
     //appbar Theme
     appBarTheme: AppBarTheme(
         centerTitle: true,
         color: colorsManager.primary,
         elevation: AppSize.s4,
         shadowColor: colorsManager.lightPrimary,
-        titleTextStyle:
-            getRegularMontesertStyle(fontSzie: FontSzie.s16, color: colorsManager.white)),
+        titleTextStyle: getRegularMontesertStyle(
+            fontSzie: FontSzie.s16, color: colorsManager.white)),
     //button Theme
 
     buttonTheme: ButtonThemeData(
@@ -40,20 +42,23 @@ brightness: brightness,
     elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
             fixedSize: Size(AppSize.s342.w, AppSize.s48.h),
-            textStyle:
-                getMediumMontesertStyle(color: colorsManager.white, fontSzie: FontSzie.s16.sp),
+            textStyle: getMediumMontesertStyle(
+                color: colorsManager.white, fontSzie: FontSzie.s16.sp),
             backgroundColor: colorsManager.primary,
             //    disabledBackgroundColor: ColorsManager.disabledGrey,
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(AppSize.s12.h)))),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(AppSize.s12.h)))),
 
     //text theme
     textTheme: TextTheme(
-        titleLarge:
-            getMediumMontesertStyle(color: colorsManager.primary, fontSzie: FontSzie.s24.sp),
-        titleMedium: getMediumMontesertStyle(color: colorsManager.grey, fontSzie: FontSzie.s16.sp),
-        titleSmall:
-            getRegularMontesertStyle(color: colorsManager.darkGrey, fontSzie: FontSzie.s14.sp),
-        bodySmall: getRegularInterStyle(color: colorsManager.darkGrey, fontSzie: FontSzie.s12.sp)),
+        titleLarge: getMediumMontesertStyle(
+            color: colorsManager.primary, fontSzie: FontSzie.s24.sp),
+        titleMedium: getMediumMontesertStyle(
+            color: colorsManager.grey, fontSzie: FontSzie.s16.sp),
+        titleSmall: getRegularMontesertStyle(
+            color: colorsManager.darkGrey, fontSzie: FontSzie.s14.sp),
+        bodySmall: getRegularInterStyle(
+            color: colorsManager.darkGrey, fontSzie: FontSzie.s12.sp)),
 
     //input decoration theme (Text Form Field)
     inputDecorationTheme: InputDecorationTheme(
@@ -63,14 +68,15 @@ brightness: brightness,
       //content padding
       contentPadding: EdgeInsets.all(AppPading.p12.w),
       //hint style
-      hintStyle:
-          getRegularMontesertStyle(color: colorsManager.lightGrey, fontSzie: FontSzie.s16.sp),
+      hintStyle: getRegularMontesertStyle(
+          color: colorsManager.lightGrey, fontSzie: FontSzie.s16.sp),
 //label style
-      labelStyle:
-          getRegularMontesertStyle(color: colorsManager.lightGrey, fontSzie: FontSzie.s16.sp),
+      labelStyle: getRegularMontesertStyle(
+          color: colorsManager.lightGrey, fontSzie: FontSzie.s16.sp),
 
 //error style
-      errorStyle: getRegularMontesertStyle(color: colorsManager.error, fontSzie: FontSzie.s12.sp),
+      errorStyle: getRegularMontesertStyle(
+          color: colorsManager.error, fontSzie: FontSzie.s12.sp),
 
       errorMaxLines: 1,
 

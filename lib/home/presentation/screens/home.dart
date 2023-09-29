@@ -162,8 +162,9 @@ class _HomeViewState extends State<HomeView> {
                                   width: AppSize.s133.w,
                                   child: Text(
                                     state.data[index].text,
-                                    style:
-                                        Theme.of(context).textTheme.bodySmall,
+                                    style: getRegularInterStyle(
+                                        color: sl<ColorsManager>().darkGrey,
+                                        fontSzie: FontSzie.s12.sp),
                                     overflow: TextOverflow.ellipsis,
                                     maxLines: 1,
                                   ),
