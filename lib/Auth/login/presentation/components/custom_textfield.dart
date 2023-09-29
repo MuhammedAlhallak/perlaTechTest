@@ -46,7 +46,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
                   width: AppSize.s24.w,
                   height: AppSize.s24.w,
                   fit: BoxFit.scaleDown,
-                  color: sl<ColorsManager>().grey,
+                  color: sl<ColorsManager>().iconColor, //grey
                 )
               : const SizedBox(),
         ),
@@ -98,7 +98,7 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
                   width: AppSize.s24.w,
                   height: AppSize.s24.w,
                   fit: BoxFit.scaleDown,
-                  color: sl<ColorsManager>().grey,
+                  color: sl<ColorsManager>().iconColor,
                 )
               : const SizedBox(),
         ),

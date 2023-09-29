@@ -89,7 +89,7 @@ class LightColorsManager extends ColorsManager {
   Color get error => const Color(0XFFB50000);
 
   @override
-  Color get iconColor => const Color(0xff333333);
+  Color get iconColor => const Color(0xffB1B1B1);
 
   @override
   Color get textTable => const Color(0xff333333);
@@ -100,7 +100,7 @@ class DarkColorsManager extends ColorsManager {
   Color get primary => const Color(0xff6C63FF);
 
   @override
-  Color get grey => const Color(0xff000000);
+  Color get grey => const Color(0xffffffff);
 
   @override
   Color get darkGrey => const Color(0xffffffff);
@@ -115,7 +115,7 @@ class DarkColorsManager extends ColorsManager {
   Color get orange => const Color(0xFFFF5757);
 
   @override
-  Color get textFieldBackground => Color(0x2BF5F5F5);
+  Color get textFieldBackground => const Color(0x2BF5F5F5);
 
   @override
   Color get tableTitleBackground => const Color(0xFFF3F4F6);

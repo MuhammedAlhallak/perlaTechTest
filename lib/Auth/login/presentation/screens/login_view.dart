@@ -61,7 +61,6 @@ class LoginView extends StatelessWidget {
                           SizedBox(
                             height: AppSize.s60.h,
                           ),
-                          
                         ],
                       ),
                     ),
@@ -102,7 +101,12 @@ class LoginView extends StatelessWidget {
                                   state.loginFormState == RequestState.loading
                                       ? sl<ColorsManager>().disabledGrey
                                       : sl<ColorsManager>().primary),
-                          child: Text(AppStrings.login.tr(context)));
+                          child: Text(
+                            AppStrings.login.tr(context),
+                            style: getMediumMontesertStyle(
+                                color: sl<ColorsManager>().grey,
+                                fontSzie: FontSzie.s16.sp),
+                          ));
                     },
                   ),
                   Padding(
