@@ -21,12 +21,12 @@ class LoginDataSource extends BaseLoginDataSource {
       "password": parameters.password
       //"Qwe@123@"
     };
-    var param = jsonEncode(object);
+    // var param = jsonEncode(object);
 
     try {
       final response = await Dio().post(
         ApiConstance.loginPath,
-        data: param,
+        data: object,
         options: Options(
           headers: {'Content-Type': 'application/json'},
           followRedirects: true,

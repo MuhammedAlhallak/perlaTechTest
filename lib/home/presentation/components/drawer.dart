@@ -42,6 +42,7 @@ class CustomDrawer extends StatelessWidget {
                   fit: BoxFit.scaleDown,
                   width: AppSize.s24.h,
                   height: AppSize.s24.h,
+                  color: sl<ColorsManager>().darkGrey,
                 ),
               ),
               onTap: () => _scaffoldState.currentState?.closeDrawer(),
@@ -65,6 +66,7 @@ class CustomDrawer extends StatelessWidget {
                     ImagesAssets.darkMode,
                     width: AppSize.s25.h,
                     height: AppSize.s25.h,
+                    color: sl<ColorsManager>().darkGrey,
                   ),
                   SizedBox(
                     width: AppSize.s12.w,
@@ -83,7 +85,7 @@ class CustomDrawer extends StatelessWidget {
               height: AppSize.s32.h,
             ),
             InkWell(
-              onTap: (){
+              onTap: () {
                 sl<AppBloc>().changeLanguage();
               },
               child: Row(
@@ -92,6 +94,7 @@ class CustomDrawer extends StatelessWidget {
                     ImagesAssets.global,
                     width: AppSize.s20.h,
                     height: AppSize.s20_5.h,
+                    color: sl<ColorsManager>().darkGrey,
                   ),
                   SizedBox(
                     width: AppSize.s14.w,
@@ -115,7 +118,7 @@ class CustomDrawer extends StatelessWidget {
               height: AppSize.s32.h,
             ),
             InkWell(
-              onTap: (){
+              onTap: () {
                 sl<AppBloc>().setAppStatus(Status.unauthorized);
               },
               child: Row(
@@ -131,7 +134,8 @@ class CustomDrawer extends StatelessWidget {
                   Text(
                     AppStrings.logOut.tr(context),
                     style: getRegularMontesertStyle(
-                        color: sl<ColorsManager>().orange, fontSzie: FontSzie.s14.sp),
+                        color: sl<ColorsManager>().orange,
+                        fontSzie: FontSzie.s14.sp),
                   ),
                 ],
               ),

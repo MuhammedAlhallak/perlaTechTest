@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 enum AppThemeMode { dark, light }
 
 abstract class ColorsManager {
@@ -20,7 +21,6 @@ abstract class ColorsManager {
 
   Color get divider;
 
-
   Color get lightPrimary;
 
   Color get lightGreyOpacity50;
@@ -34,9 +34,11 @@ abstract class ColorsManager {
   Color get disabledGrey;
 
   Color get error;
+
+  Color get iconColor;
 }
 
-class LightColorsManager extends ColorsManager{
+class LightColorsManager extends ColorsManager {
   @override
   Color get primary => const Color(0xff6C63FF);
 
@@ -64,7 +66,6 @@ class LightColorsManager extends ColorsManager{
   @override
   Color get divider => const Color(0xF3F4F6CC);
 
-
   @override
   Color get lightPrimary => const Color.fromRGBO(105, 99, 226, 1);
 
@@ -85,6 +86,9 @@ class LightColorsManager extends ColorsManager{
 
   @override
   Color get error => const Color(0XFFB50000);
+
+  @override
+  Color get iconColor => const Color(0xff333333);
 }
 
 class DarkColorsManager extends ColorsManager {
@@ -101,10 +105,10 @@ class DarkColorsManager extends ColorsManager {
   Color get white => const Color(0xFFFFFFFF);
 
   @override
-  Color get lightGrey => const Color(0xffC7C7C7);
+  Color get lightGrey => const Color(0xFFFFFFFF);
 
   @override
-  Color get orange => const Color(0xFFffffff);
+  Color get orange => const Color(0xFFFF5757);
 
   @override
   Color get textFieldBackground => const Color(0xFFF5F5F5);
@@ -115,12 +119,11 @@ class DarkColorsManager extends ColorsManager {
   @override
   Color get divider => const Color(0xF3ffffff);
 
-
   @override
   Color get lightPrimary => const Color(0xff6C63FF);
 
   @override
-  Color get lightGreyOpacity50 => const Color(0x80707070);
+  Color get lightGreyOpacity50 => const Color(0x80FFFFFF);
 
   @override
   Color get darkPrimary => const Color(0xff6C63FF);
@@ -136,6 +139,9 @@ class DarkColorsManager extends ColorsManager {
 
   @override
   Color get error => const Color(0xFFB50000);
+
+  @override
+  Color get iconColor => const Color(0xffffffff);
 }
 
 class ThemeFactory {
