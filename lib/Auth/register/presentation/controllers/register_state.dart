@@ -12,7 +12,7 @@ class RegisterState {
   bool get isValidPassword => password.length > 6;
 
   final String confirmPassword;
-  bool get isValidconfirmPassword => confirmPassword.length > 6;
+  bool get isValidconfirmPassword => confirmPassword == password;
   // final FormSubmissionStatus formStatus;
   final RequestState registerFormState;
   final String registerMassage;

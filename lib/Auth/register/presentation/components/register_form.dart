@@ -160,9 +160,8 @@ class RegisterForm extends StatelessWidget {
           return PasswordTextField(
             prefixIcon: ImagesAssets.lock,
             suffixIcon: ImagesAssets.crossedEye,
-            validator: (value) => state.isValidconfirmPassword
-                ? null
-                : 'confirm password Too Short',
+            validator: (value) =>
+                state.isValidconfirmPassword ? null : 'password not matched',
             onChanged: (value) => context.read<RegisterBloc>().add(
                 RegisterConfirmPasswordChangedEvent(confirmPassword: value)),
           );
