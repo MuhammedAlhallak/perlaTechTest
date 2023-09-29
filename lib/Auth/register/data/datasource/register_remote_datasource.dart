@@ -31,10 +31,14 @@ class RegisterDataSource extends BaseRegisterDataSource {
               return status! < 500;
             },
           ));
-      var data = jsonDecode(response.data);
+
       if (response.statusCode == 200) {
+        var data = response.data["data"];
+
         return RegisterDataModel.fromJson(data);
       } else {
+        var data = response.data;
+
         throw ServerException(ErrorMassageModel.fromJson(data));
       }
     } on DioException catch (e) {

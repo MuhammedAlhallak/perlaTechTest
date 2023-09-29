@@ -31,13 +31,13 @@ class LoginDataSource extends BaseLoginDataSource {
           },
         ),
       );
-    
-      var data = response.data["data"];
-    
-      
+
       if (response.statusCode == 200) {
+        var data = response.data["data"];
         return UserInfoModel.fromJson(data);
       } else {
+        var data = response.data;
+
         throw ServerException(ErrorMassageModel.fromJson(data));
       }
     } on DioException catch (e) {

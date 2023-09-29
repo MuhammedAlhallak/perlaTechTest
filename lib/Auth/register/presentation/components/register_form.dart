@@ -152,7 +152,7 @@ class RegisterForm extends StatelessWidget {
 
   Widget _confirmPasswordTextField() {
     return BlocBuilder<RegisterBloc, RegisterState>(
-        buildWhen: (previous, current) => previous.password != current.password,
+        buildWhen: (previous, current) => previous.confirmPassword != current.confirmPassword,
         builder: (context, state) {
           return PasswordTextField(
             prefixIcon: ImagesAssets.lock,

@@ -11,7 +11,7 @@ class CustomTextField extends StatefulWidget {
       this.hintText,
       this.onChanged,
       this.validator,
-        this.controller,
+      this.controller,
       this.prefixIcon});
   final String? hintText;
   final String? prefixIcon;
@@ -31,8 +31,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
       decoration: InputDecoration(
         hintText: widget.hintText ?? '',
         prefixIcon: Padding(
-          padding:
-              EdgeInsets.only(left: 16.w, right: 12.w),
+          padding: EdgeInsets.only(left: 16.w, right: 12.w),
           child: widget.prefixIcon != null
               ? SvgPicture.asset(
                   widget.prefixIcon!,
