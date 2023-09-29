@@ -29,7 +29,7 @@ class userLoginModel extends UserLogin {
   factory userLoginModel.fromJson(Map<String, dynamic> json) => userLoginModel(
         id: json['id'],
         username: json['username'] ?? "",
-        phone: json['phone'] ?? 0996975297,
+        phone: json['phone'] ?? "0996975297",
         timestamp: json['timestamp'].toString(),
         points: json['points'] ?? 0,
         imagePath: json['image_path'] ?? "",

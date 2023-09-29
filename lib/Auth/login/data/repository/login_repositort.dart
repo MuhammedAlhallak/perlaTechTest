@@ -19,7 +19,6 @@ class LoginRepository extends BaseLoginRepository {
   Future<Either<Failure, UserInfo>> login(LoginParameters parameters) async {
     try {
       final result = await baseLoginDataSource.login(parameters);
-      log("message");
       baseUserInfoRepository.saveUserInfo(result);
       return Right(result);
     } on ServerException catch (failure) {
