@@ -1,6 +1,4 @@
 import 'dart:convert';
-import 'dart:developer';
-
 import 'package:dio/dio.dart';
 
 import 'package:perlatech/Auth/login/domain/usecases/login_usecase.dart';
@@ -41,11 +39,9 @@ class LoginDataSource extends BaseLoginDataSource {
         throw ServerException(ErrorMassageModel.fromJson(data));
       }
     } on DioException catch (e) {
-      print('Dio error: $e');
-      throw ServerException(ErrorMassageModel(message: e.message!, data: []));
+      throw ServerException(ErrorMassageModel(message: e.message!, data:const []));
     } on FormatException catch (e) {
-      print('Format error: $e');
-      throw ServerException(ErrorMassageModel(message: e.message, data: []));
+      throw ServerException(ErrorMassageModel(message: e.message, data:const []));
     }
   }
 }

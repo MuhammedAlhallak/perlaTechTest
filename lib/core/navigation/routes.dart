@@ -1,6 +1,4 @@
 import 'dart:async';
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:perlatech/Auth/login/presentation/screens/login_view.dart';

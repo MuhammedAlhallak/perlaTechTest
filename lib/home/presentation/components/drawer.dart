@@ -57,7 +57,6 @@ class CustomDrawer extends StatelessWidget {
             ),
             InkWell(
               onTap: () {
-                print('ddsdsdsdsdsdsdsds');
                 sl<AppBloc>().changeTheme();
               },
               child: Row(

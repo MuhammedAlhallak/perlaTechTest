@@ -18,7 +18,7 @@ import '../components/drawer.dart';
 import '../controllers/home_bloc.dart';
 
 class HomeView extends StatefulWidget {
-  HomeView({super.key});
+ const HomeView({super.key});
 
   @override
   State<HomeView> createState() => _HomeViewState();
@@ -80,7 +80,7 @@ class _HomeViewState extends State<HomeView> {
                         ),
                         child: Row(
                           children: [
-                            Container(
+                            SizedBox(
                               width: AppSize.s252.w,
                               height: AppSize.s48.h,
                               child: CustomTextField(

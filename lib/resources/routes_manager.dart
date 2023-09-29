@@ -21,13 +21,13 @@ class RoutesGenerator {
   static Route<dynamic> getRoute(RouteSettings settings) {
     switch (settings.name) {
       case Routes.splashRoute:
-        return MaterialPageRoute(builder: (_) => SplashView());
+        return MaterialPageRoute(builder: (_) => const SplashView());
       case Routes.loginRoute:
-        return MaterialPageRoute(builder: (_) => LoginView());
+        return MaterialPageRoute(builder: (_) => const LoginView());
       case Routes.homeRoute:
-        return MaterialPageRoute(builder: (_) => HomeView());
+        return MaterialPageRoute(builder: (_) => const HomeView());
       case Routes.registerRoute:
-        return MaterialPageRoute(builder: (_) => RegisterView());
+        return MaterialPageRoute(builder: (_) => const RegisterView());
       // case Routes.onBoardingRoute:
       //   return MaterialPageRoute(builder: (_) => const OnboardingView());
       // case Routes.forgotPasswordRoute:
