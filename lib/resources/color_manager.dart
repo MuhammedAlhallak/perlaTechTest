@@ -36,6 +36,7 @@ abstract class ColorsManager {
   Color get error;
 
   Color get iconColor;
+  Color get textTable;
 }
 
 class LightColorsManager extends ColorsManager {
@@ -89,6 +90,9 @@ class LightColorsManager extends ColorsManager {
 
   @override
   Color get iconColor => const Color(0xff333333);
+
+  @override
+  Color get textTable => const Color(0xff333333);
 }
 
 class DarkColorsManager extends ColorsManager {
@@ -96,16 +100,16 @@ class DarkColorsManager extends ColorsManager {
   Color get primary => const Color(0xff6C63FF);
 
   @override
-  Color get grey => const Color(0xffB1B1B1);
+  Color get grey => const Color(0xff000000);
 
   @override
   Color get darkGrey => const Color(0xffffffff);
 
   @override
-  Color get white => const Color(0xFFFFFFFF);
+  Color get white => const Color(0xFF000000);
 
   @override
-  Color get lightGrey => const Color(0xFFFFFFFF);
+  Color get lightGrey => const Color(0xff000000);
 
   @override
   Color get orange => const Color(0xFFFF5757);
@@ -129,7 +133,7 @@ class DarkColorsManager extends ColorsManager {
   Color get darkPrimary => const Color(0xff6C63FF);
 
   @override
-  Color get lightPrimaryOpacity5 => const Color(0x0D9C4EDC);
+  Color get lightPrimaryOpacity5 => const Color(0x0Dffffff);
 
   @override
   Color get grey1 => const Color(0xFFffffff);
@@ -142,6 +146,9 @@ class DarkColorsManager extends ColorsManager {
 
   @override
   Color get iconColor => const Color(0xffffffff);
+
+  @override
+  Color get textTable => const Color(0xff000000);
 }
 
 class ThemeFactory {

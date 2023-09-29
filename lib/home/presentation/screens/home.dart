@@ -51,7 +51,9 @@ class _HomeViewState extends State<HomeView> {
               children: [
                 Padding(
                   padding: EdgeInsets.only(
-                      left: AppPading.p24.w, top: AppPading.p48.h, right: AppPading.p24.w),
+                      left: AppPading.p24.w,
+                      top: AppPading.p48.h,
+                      right: AppPading.p24.w),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -105,7 +107,8 @@ class _HomeViewState extends State<HomeView> {
                                       sl<ColorsManager>().primary),
                               child: Text(AppStrings.add.tr(context),
                                   style: getMediumMontesertStyle(
-                                      color: sl<ColorsManager>().white, fontSzie: AppSize.s16.sp)),
+                                      color: sl<ColorsManager>().white,
+                                      fontSzie: AppSize.s16.sp)),
                             ),
                           ],
                         ),
@@ -114,14 +117,15 @@ class _HomeViewState extends State<HomeView> {
                         width: AppSize.s342.w,
                         height: AppSize.s40.h,
                         color: sl<ColorsManager>().tableTitleBackground,
-                        padding: EdgeInsets.symmetric(vertical: AppPading.p13.h),
+                        padding:
+                            EdgeInsets.symmetric(vertical: AppPading.p13.h),
                         child: Row(
                           children: [
                             Container(
                               margin: EdgeInsets.only(left: AppMargin.m24.w),
                               child: Text(AppStrings.text.tr(context),
                                   style: getMediumMontesertStyle(
-                                      color: sl<ColorsManager>().darkGrey,
+                                      color: sl<ColorsManager>().textTable,
                                       fontSzie: FontSzie.s12.sp),
                                   textAlign: TextAlign.center),
                             ),
@@ -129,7 +133,7 @@ class _HomeViewState extends State<HomeView> {
                               margin: EdgeInsets.only(left: AppMargin.m155.w),
                               child: Text(AppStrings.date.tr(context),
                                   style: getMediumMontesertStyle(
-                                      color: sl<ColorsManager>().darkGrey,
+                                      color: sl<ColorsManager>().textTable,
                                       fontSzie: FontSzie.s12.sp),
                                   textAlign: TextAlign.center),
                             ),
@@ -161,7 +165,8 @@ class _HomeViewState extends State<HomeView> {
                                   width: AppSize.s133.w,
                                   child: Text(
                                     state.data[index].text,
-                                    style: Theme.of(context).textTheme.bodySmall,
+                                    style:
+                                        Theme.of(context).textTheme.bodySmall,
                                     overflow: TextOverflow.ellipsis,
                                     maxLines: 1,
                                   ),

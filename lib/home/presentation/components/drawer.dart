@@ -42,7 +42,7 @@ class CustomDrawer extends StatelessWidget {
                   fit: BoxFit.scaleDown,
                   width: AppSize.s24.h,
                   height: AppSize.s24.h,
-                  color: sl<ColorsManager>().darkGrey,
+                  color: sl<ColorsManager>().textTable,
                 ),
               ),
               onTap: () => _scaffoldState.currentState?.closeDrawer(),
